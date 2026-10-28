@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherPulse | Real-time Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ WeatherPulse</h1>
+            <p>Check real-time weather using OpenWeather REST API, Async JavaScript & LocalStorage.</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name (e.g., Delhi, London, Tokyo)...">
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn" class="clear-btn">Clear</button>
+        </div>
+
+        <div id="loading" class="loading hidden">Fetching weather data...</div>
+        <div id="errorMsg" class="error hidden"></div>
+
+        <main class="weather-content">
+            <!-- Weather Display Card -->
+            <section id="weatherCard" class="weather-card hidden">
+                <div class="weather-header">
+                    <h2 id="cityName">Delhi, IN</h2>
+                    <button id="favBtn" class="fav-btn">⭐ Save City</button>
+                </div>
+                <div class="weather-main">
+                    <img id="weatherIcon" src="" alt="Weather Icon">
+                    <div>
+                        <h3 id="temp">28°C</h3>
+                        <p id="description">Clear Sky</p>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span>💧 Humidity</span>
+                        <strong id="humidity">60%</strong>
+                    </div>
+                    <div class="detail-item">
+                        <span>💨 Wind Speed</span>
+                        <strong id="windSpeed">12 km/h</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Saved Cities Section -->
+            <section class="favorites-section">
+                <h3>⭐ Favorite Cities</h3>
+                <ul id="favoritesList">
+                    <!-- Saved cities will appear here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
