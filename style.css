@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #06e91c;
+    background-color: #6d718a;
     color: #f8fafc;
     padding: 20px;
     display: flex;
@@ -17,7 +17,7 @@ body {
 .container {
     width: 100%;
     max-width: 900px;
-    background: #13e708;
+    background: #13045f;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
